@@ -4,13 +4,10 @@ load(
     "@local_config_musa//musa:build_defs.bzl",
     "musa_library",
 )
-load("//xla:xla.default.bzl", "xla_cc_test")
-load("//xla/service/gpu:build_defs.bzl", "get_cub_sort_kernel_types")
 load(
     "//xla/stream_executor:build_defs.bzl",
     "stream_executor_friends",
 )
-load("//xla/tests:build_defs.bzl", "xla_test")
 load(
     "//xla/tsl:tsl.bzl",
     "internal_visibility",
@@ -85,7 +82,7 @@ cc_library(
     ],
     deps = [
         "//xla/tsl/platform:env",
-        "@local_config_musa//musa:musa",  # buildcleaner: keep
+        "@local_config_musa//musa",  # buildcleaner: keep
         "@local_config_musa//musa:musa_headers",
         "@tsl//tsl/platform:dso_loader",
     ],
@@ -510,8 +507,8 @@ cc_library(
         "musa-only",
     ],
     deps = [
-        ":musa_executor",
         ":mupti_if_static",  # buildcleaner: keep
+        ":musa_executor",
         "//xla/tsl/platform:env",
         "@local_config_musa//musa:musa_headers",
         "@tsl//tsl/platform",
@@ -658,10 +655,10 @@ cc_library(
         "musa-only",
     ],
     deps = [
+        ":musa_context",
         ":musa_driver_wrapper",
         ":musa_kernel",
         ":musa_status",
-        ":musa_context",
         "//xla/stream_executor:bit_pattern",
         "//xla/stream_executor:command_buffer",
         "//xla/stream_executor:device_memory",
@@ -899,9 +896,9 @@ cc_library(
         "musa-only",
     ],
     deps = [
-        ":musparse_if_static",
         ":musa_executor",
         ":musa_platform_id",
+        ":musparse_if_static",
         "//xla/tsl/platform:env",
         "@local_config_musa//musa:musa_headers",
         "@tsl//tsl/platform",
