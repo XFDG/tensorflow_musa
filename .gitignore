@@ -1,0 +1,40 @@
+# Copyright 2023 The OpenXLA Authors
+#
+
+
+# Ignore the bazel directories when this directory is used as a local repository.
+bazel-*
+bazel-bin
+bazel-out
+bazel-testlogs
+
+# Ignore files produced by `configure`
+.tf_configure.bazelrc
+xla_configure.bazelrc
+tools/python_bin_path.sh
+
+# Emacs autosaves
+*~
+\#*\#
+
+# Visual Studio files
+.vs/
+.vscode/
+*.sdf
+*.opensdf
+*.VC.opendb
+*.suo
+*.user
+
+# Ignore jxy debug files
+xla/tests/test_results
+xla/tests/data/test_result*
+compile.log
+target_config
+tasks
+todo
+*.swp
+build_run_hlo_module.sh
+debug_musa.gdb
+debug_run_hlo_module.sh
+.clangd

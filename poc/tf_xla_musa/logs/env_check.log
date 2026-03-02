@@ -1,0 +1,43 @@
+== Basic ==
+2026年 03月 02日 星期一 10:38:17 CST
+fenghaoran-AIBOOK-ABA14011
+/home/fenghaoran/桌面/openxla-main/poc/tf_xla_musa
+
+== Python ==
+Python 3.10.12
+
+== MUSA env ==
+MUSA_HOME=
+MUSA_PATH=
+LD_LIBRARY_PATH=/usr/local/musa/lib:/usr/lib/aarch64-linux-gnu/musa/:/usr/lib/aarch64-linux-gnu/:/usr/local/mt_vaapi/lib
+
+== MUSA binaries ==
+/usr/bin/mthreads-smi
+/usr/local/musa/bin/mcc
+/usr/local/musa/bin/llvm-link
+/usr/local/musa/bin/opt
+/usr/local/musa/bin/llc
+/usr/local/musa/bin/ld.lld
+
+== MUSA toolkit files ==
+lrwxrwxrwx 1 root root 10  5月 15  2025 /usr/local/musa -> musa-3.1.2
+-rwxr-xr-x 1 root root 805594  3月 21  2025 /usr/local/musa/include/musa.h
+lrwxrwxrwx 1 root root 5  5月 15  2025 /usr/local/musa/bin/mcc -> clang
+
+== MUSA libs ==
+-rw-r--r--  1 root root  217171424  3月 21  2025 libmublas.so
+lrwxrwxrwx  1 root root         13  5月 15  2025 libmudnn.so -> libmudnn.so.2
+lrwxrwxrwx  1 root root         19  5月 15  2025 libmudnn.so.2 -> libmudnn.so.2.7.0.0
+-rwxr-xr-x  1 root root 1316467984  3月 21  2025 libmudnn.so.2.7.0.0
+-rw-r--r--  1 root root     553272  3月 21  2025 libmufft.so
+lrwxrwxrwx  1 root root         16  5月 15  2025 libmusart.so -> libmusart.so.1.0
+lrwxrwxrwx  1 root root         18  5月 15  2025 libmusart.so.1.0 -> libmusart.so.1.0.0
+-rw-r--r--  1 root root     203472  3月 21  2025 libmusart.so.1.0.0
+-rwxrwxr-x  1 root root     376214  3月 21  2025 libmusart_static.a
+lrwxrwxrwx  1 root root         14  5月 15  2025 libmusa.so -> libmusa.so.1.0
+lrwxrwxrwx  1 root root         16  5月 15  2025 libmusa.so.1.0 -> libmusa.so.1.0.0
+-rw-r--r--  1 root root    4390456  3月 21  2025 libmusa.so.1.0.0
+-rwxrwxr-x  1 root root     814818  3月 21  2025 libmusa_static.a
+-rw-r--r--  1 root root  116426416  3月 21  2025 libmusparse.so
+
+== Device list from TF ==
